@@ -9,11 +9,24 @@ from itemloaders.processors import TakeFirst, MapCompose
 from w3lib.html import remove_tags
 
 def remove_currency(value):
-    return value.replace(["$", ".", ","], "").strip()
+    value = value.replace("$", "")
+    value = value.replace(",", "")
+    value = value.replace(".", "").strip()
+    return value
 
-def clean_string(string):
-    return string.replace(["\n", "\r", "\t"], "").strip()
+def remove_special(string):
+    string = string.replace("\n", "")
+    string = string.replace("\r", "")
+    string = string.replace("\t", "").strip()
+    string = "".join(string)
+    return string
 
 class NbscraperItem(scrapy.Item):
     # define the fields for your item here like:
-    pass
+    name = scrapy.Field(input_processor=MapCompose(remove_tags), output_processor=TakeFirst())
+    price = scrapy.Field(input_processor=MapCompose(remove_tags, remove_currency), output_processor=TakeFirst())
+    processor = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
+    ram = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
+    monitor = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
+    storage = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
+    video_card = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
