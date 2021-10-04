@@ -26,6 +26,6 @@ class NBSpider(scrapy.Spider):
 					"storage": nb.xpath(".//div[@class='description-container']/dl/dd[4]/ul/li/text()").get(),
 					"video-card": "NA",
 				}
-#		next_page = "https://www.solotodo.cl/notebooks" + response.css("a.page-link::attr(href)").getall()[-1]
-#		if next_page is not None:
-#			yield response.follow(next_page, callback=self.parse)
+		next_page = "https://www.solotodo.cl/notebooks" + response.xpath("//ul[@class='pagination']/li[last()]/a/@href").get()
+		if next_page is not None:
+			yield response.follow(next_page, callback=self.parse)
