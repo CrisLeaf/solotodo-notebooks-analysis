@@ -23,7 +23,7 @@ The data was scraped from the [notebooks section](https://www.solotodo.cl/notebo
 
 - [scrapy](https://scrapy.org/)
 
-To get the dataset, inside the **nbscraper** folder, on the terminal run:
+To get the dataset, inside the **scrapy/nbscraper** folder, on the terminal run:
 
 ```
 scrapy crawl notebooks -O notebooks.csv
