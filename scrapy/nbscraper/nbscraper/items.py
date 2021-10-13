@@ -27,6 +27,7 @@ class NbscraperItem(scrapy.Item):
     price = scrapy.Field(input_processor=MapCompose(remove_tags, remove_currency), output_processor=TakeFirst())
     processor = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
     ram = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
-    monitor = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
+    screen = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
     storage = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
     video_card = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())
+    dedicated_video_card = scrapy.Field(input_processor=MapCompose(remove_tags, remove_special), output_processor=TakeFirst())

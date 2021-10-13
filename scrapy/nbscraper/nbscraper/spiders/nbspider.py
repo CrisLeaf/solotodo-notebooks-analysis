@@ -13,9 +13,10 @@ class NBSpider(scrapy.Spider):
 			loader.add_xpath("price", ".//div[@class='d-flex flex-row justify-content-between align-items-center mt-auto pt-2']/div/a")
 			loader.add_xpath("processor", ".//div[@class='description-container']/dl/dd[1]")
 			loader.add_xpath("ram", ".//div[@class='description-container']/dl/dd[2]")
-			loader.add_xpath("monitor", ".//div[@class='description-container']/dl/dd[3]")
+			loader.add_xpath("screen", ".//div[@class='description-container']/dl/dd[3]")
 			loader.add_xpath("storage", ".//div[@class='description-container']/dl/dd[4]/ul/li")
 			loader.add_xpath("video_card", ".//div[@class='description-container']/dl/dd[5]/ul/li")
+			loader.add_xpath("dedicated_video_card", ".//div[@class='description-container']/dl/dd[5]/ul/li[2]")
 			yield loader.load_item()
 		try:
 			next_page = "https://www.solotodo.cl/notebooks" + response.xpath("//ul[@class='pagination']/li[last()]/a/@href").get()
