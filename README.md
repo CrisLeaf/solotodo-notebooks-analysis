@@ -38,7 +38,7 @@ We got the importances of each notebook component, and the respective error.
 ## Things to be done
 
 - [X] Verify the statistical analysis using Classical Machine Learning models.
-- [ ] Improve the predictive power with an hyperparameter search.
+- [X] Improve the predictive power with an hyperparameter search.
 
 
 ## Support
