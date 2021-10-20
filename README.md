@@ -39,6 +39,7 @@ We got the importances of each notebook component, and the respective error.
 
 - [X] Verify the statistical analysis using Classical Machine Learning models.
 - [X] Improve the predictive power with an hyperparameter search.
+- [X] Neural Network Added to test the predictive power.
 
 
 ## Support
