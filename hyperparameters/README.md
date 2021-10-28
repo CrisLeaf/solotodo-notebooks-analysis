@@ -1,6 +1,6 @@
 # Hyperparameters tuning
 
-The hyperparameter choice of any machine learning model can be improved using scripts. Luckily there exists a bunch of Python libraries to do so.
+The hyperparameter choice of any machine learning model can be improved using scripts. Luckily there exists a bunch of Python libraries to do so. We are using Optuna, as it allows us to define non discrete spaces. One can just pick random numbers defining only the upper and lower bounds.
 
 
 ## Requirements
@@ -17,8 +17,3 @@ The Python Notebook was written using a Python Google Colab Notebook environment
 ## Dataset
 
 The dataset was prepared in the notebooks_analysis.ipynb python notebook. Loaded from the Google Drive. And it is also uploaded in this folder.
-
-
-## Results
-
-We got a good suggestion of hyperparameters.
