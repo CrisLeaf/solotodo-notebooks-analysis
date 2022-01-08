@@ -32,7 +32,11 @@ scrapy crawl notebooks -O notebooks.csv
 
 ## Results
 
-We got the importances of each notebook component, and the respective error.
+We got the importances of each notebook component, and the respective error. Open
+```
+notebooks_analysis.ipynb
+```
+to see the full analysis.
 
 
 ## Things to be done
